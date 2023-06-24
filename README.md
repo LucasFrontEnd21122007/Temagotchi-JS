@@ -1,0 +1,2 @@
+# Temagotchi-JS
+Temagotchi JS

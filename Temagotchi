@@ -1,0 +1,67 @@
+// Definindo o objeto Tamagotchi
+const tamagotchi = {
+  nome: "Europagotchi",
+  fome: 0,
+  energia: 0,
+  saude: 0,
+  idade: 0,
+
+  // Função para alimentar o Tamagotchi
+  alimentar: function() {
+    this.fome -= 5;
+    if (this.fome < 0) {
+      this.fome = 0;
+    }
+    console.log("O Europagotchi foi alimentado!");
+  },
+
+  // Função para brincar com o Tamagotchi
+  brincar: function() {
+    this.energia -= 5;
+    if (this.energia < 0) {
+      this.energia = 0;
+    }
+    console.log("O Europagotchi está brincando!");
+  },
+
+  // Função para cuidar da saúde do Tamagotchi
+  cuidarDaSaude: function() {
+    this.saude += 5;
+    if (this.saude > 100) {
+      this.saude = 100;
+    }
+    console.log("A saúde do Europagotchi foi cuidada!");
+  },
+
+  // Função para envelhecer o Tamagotchi
+  envelhecer: function() {
+    this.idade += 1;
+    console.log("O Europagotchi está ficando mais velho!");
+  }
+};
+
+// Simulação de tempo passando
+function passarTempo() {
+  tamagotchi.fome += 5;
+  tamagotchi.energia += 5;
+  tamagotchi.saude -= 5;
+  tamagotchi.envelhecer();
+}
+
+// Simulação de interação com o Europagotchi
+tamagotchi.alimentar();
+tamagotchi.brincar();
+tamagotchi.cuidarDaSaude();
+passarTempo();
+
+// Informações sobre a vegetação europeia
+const vegetacaoEuropeia = {
+  pais: "Alemanha",
+  percentual: 32,
+  frutaPrincipal: "Maçã"
+};
+
+console.log("Informações sobre a vegetação europeia:");
+console.log(`- País: ${vegetacaoEuropeia.pais}`);
+console.log(`- Percentual de vegetação: ${vegetacaoEuropeia.percentual}%`);
+console.log(`- Principal fruta: ${vegetacaoEuropeia.frutaPrincipal}`);

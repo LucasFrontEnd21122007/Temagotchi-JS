@@ -1,2 +1,1 @@
-# Temagotchi-JS
-Temagotchi JS
+Projeto feito somente em Javascript
